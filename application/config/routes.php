@@ -52,3 +52,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+
+$route['edu-admin/index'] = 'admin/index';
+$route['edu-admin/signup'] = 'admin/signup';
+$route['edu-admin/dashboard'] = 'admin/dashboard';
+$route['edu-admin/logout'] = 'admin/logout';
+
+
