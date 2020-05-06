@@ -89,7 +89,7 @@
                     </section>
                 </li>
                 <!-- <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="../assets/images/a0.png" alt="..."> </span> <?php echo $_SESSION['name']; ?> <b class="caret"></b> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="../assets/images/a0.png" alt="..."> </span> <?php //echo $_SESSION['name']; ?> <b class="caret"></b> </a>
                     <ul class="dropdown-menu animated fadeInRight">
                         <li> <span class="arrow top"></span> <a href="#">Settings</a> </li>
                         <li> <a href="profile.html">Profile</a> </li>
@@ -136,7 +136,7 @@
 
 
                                         <li>
-                                            <a href="#" class="auto"> <span class="pull-right text-muted"> <i class="i i-circle-sm-o text"></i> <i class="i i-circle-sm text-active"></i> </span> <b class="badge bg-danger pull-right"></b> <i class="i i-stack icon"> </i> <span class="font-bold">All Students</span> </a>
+                                            <a href="<?php echo base_url(); ?>edu-admin/all_students" class="auto"> <span class="pull-right text-muted"> <i class="i i-circle-sm-o text"></i> <i class="i i-circle-sm text-active"></i> </span> <b class="badge bg-danger pull-right"></b> <i class="i i-stack icon"> </i> <span class="font-bold">All Students</span> </a>
                                             <ul class="nav dk">
 
                                             
@@ -153,7 +153,7 @@
                                         </li>
 
                                         <li>
-                                            <a href="#" class="auto"> <span class="pull-right text-muted"> <i class="i i-circle-sm-o text"></i> <i class="i i-circle-sm text-active"></i> </span> <b class="badge bg-danger pull-right"></b> <i class="i i-stack icon"> </i> <span class="font-bold">Add New Student</span> </a>
+                                            <a href="<?php echo base_url(); ?>edu-admin/add_new_student" class="auto"> <span class="pull-right text-muted"> <i class="i i-circle-sm-o text"></i> <i class="i i-circle-sm text-active"></i> </span> <b class="badge bg-danger pull-right"></b> <i class="i i-stack icon"> </i> <span class="font-bold">Add New Student</span> </a>
                                             <ul class="nav dk">
 
                                             

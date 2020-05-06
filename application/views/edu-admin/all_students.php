@@ -52,7 +52,7 @@
                                     <th><?php echo $all_students_data['reg']; ?></th>
                                     <th><?php echo $all_students_data['board']; ?></th>
                                     <th><?php echo $all_students_data['institute']; ?></th>
-                                    <th><img style="width: 50px; height: 50px;" src="students_pic/<?php echo $all_students_data['stu_pic']; ?>" alt=""></th>
+                                    <th><img style="width: 50px; height: 50px;" src="<?php echo $all_students_data['stu_pic']; ?>" alt="Photo"></th>
 
 
                                     <?php 
@@ -65,8 +65,18 @@
 
                                      ?>
 
+                                     <?php 
 
-                                    <th><a class="btn btn-info" href="add_result.php?sl=<?php echo $all_students_data['stu_sl']; ?>">Add Result</a></th>
+                                        // ?sl=<?php echo $all_students_data['stu_sl']; ?>
+
+                                      <!-- ?> -->
+
+
+                                    <th><a class="btn btn-info" href="<?php echo base_url(); ?>edu-admin/add_result?sl=<?php echo $all_students_data['stu_sl']; ?>">Add Result</a></th>
+
+                                    <th><a class="btn btn-info" href="<?php echo base_url(); ?>edu-admin/delete_student?sl=<?php echo $all_students_data['stu_sl']; ?>">Delete</a></th>
+
+                                    
 
                                         <?php 
 
@@ -84,7 +94,13 @@
 
                                          ?>
 
-                                         <th><a class="btn btn-success" href="update_result.php?sl=<?php echo $single_result['result_sl']; ?>">Update Result</a></th>
+                                         <th><a class="btn btn-success" href="<?php echo base_url(); ?>edu-admin/update_result?sl=<?php echo $single_result['result_sl']; ?>">Update Result</a></th>
+
+                                         <th><a class="btn btn-danger" href="<?php echo base_url(); ?>edu-admin/delete_student?sl=<?php echo $all_students_data['stu_sl']; ?>">Delete</a></th>
+
+
+                                            
+                                         
 
                                             <?php 
 
@@ -132,3 +148,4 @@
 
 
     ?>
+

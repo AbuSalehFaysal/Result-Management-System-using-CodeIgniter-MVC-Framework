@@ -8,4 +8,9 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('index');
 	}
+
+	public function search()
+	{
+		$this->load->view('search');
+	}
 }

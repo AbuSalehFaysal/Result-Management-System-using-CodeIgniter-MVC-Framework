@@ -45,7 +45,7 @@
                 $sql = "INSERT INTO students_info (stu_name, stu_roll, reg, board, institute,   stu_pic) VALUES ('$stu_name','$stu_roll','$reg','$board','$institute', '$upname')";
                 $conn -> query($sql);
 
-                move_uploaded_file($stu_tpic, 'students_pic/'.$upname);
+                // move_uploaded_file($stu_tpic, 'edu-admin/students_pic/'.$upname);
 
                 $mess = "<p class='alert alert-success'>The information is added successfully, Congratulations!<button class='close' data-dismiss='alert'>&times;</button></p>";
 
@@ -73,7 +73,7 @@
                     <div class="card" style="padding: 30px;">
                     <div class="card-header"></div>
                     <div class="card-body">
-                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
+                        <form action="<?php echo base_url(); ?>edu-admin/add_new_student" method="POST" enctype="multipart/form-data">
 
                             <div class="form-group">
                                 <label for="">Student Name</label>

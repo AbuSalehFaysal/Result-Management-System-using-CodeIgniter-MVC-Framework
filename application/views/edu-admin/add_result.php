@@ -121,7 +121,7 @@
                     <div class="card" style="padding: 30px;">
                     <div class="card-header"></div>
                     <div class="card-body">
-                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>?sl=<?php echo $SL; ?>" method="POST">
+                        <form action="<?php echo base_url(); ?>edu-admin/add_result?sl=<?php echo $SL; ?>" method="POST">
 
                             <div class="form-group">
                                 <label for="">Bangla</label>

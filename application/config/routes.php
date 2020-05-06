@@ -55,9 +55,20 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 
+$route['search'] = 'welcome/search';
+
+
+
+
+
 $route['edu-admin/index'] = 'admin/index';
 $route['edu-admin/signup'] = 'admin/signup';
 $route['edu-admin/dashboard'] = 'admin/dashboard';
 $route['edu-admin/logout'] = 'admin/logout';
+$route['edu-admin/all_students'] = 'admin/all_students';
+$route['edu-admin/add_new_student'] = 'admin/add_new_student';
+$route['edu-admin/add_result'] = 'admin/add_result';
+$route['edu-admin/update_result'] = 'admin/update_result';
+$route['edu-admin/delete_student'] = 'admin/delete_student';
 
 

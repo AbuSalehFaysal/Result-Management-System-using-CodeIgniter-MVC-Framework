@@ -100,6 +100,10 @@
                     <div class="text-center m-t m-b"><a href=""><small></small></a></div>
                     <div class="line line-dashed"></div>
                     <p class="text-muted text-center"><small>Do not have an account?</small></p> <a href="<?php echo base_url(); ?>edu-admin/signup" class="btn btn-lg btn-default btn-block">Create an account</a> 
+                    <br>
+                    <br>
+                    <p class="text-muted text-center"><small>Are you a student?</small></p>
+                    <a href="<?php echo base_url(); ?>" class="btn btn-lg btn-default btn-block">Click Here to Check Your Result</a> 
                 </form>
 
 
