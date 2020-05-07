@@ -38,7 +38,7 @@
         $reg = $single_data['reg'];
         $board = $single_data['board'];
         $institute = $single_data['institute'];
-        $stu_pic = $single_data['stu_pic'];
+        // $stu_pic = $single_data['stu_pic'];
        
 
 
@@ -90,7 +90,7 @@
                 // $b = "";  
 
 
-                $sql = "INSERT INTO students_results (name, roll, reg, board, institute, stu_pic, b_m, b_g, b_c, e_m, e_g, e_c, m_m, m_g, m_c, s_m, s_g, s_c, ss_m, ss_g, ss_c, r_m, r_g, r_c, grade_alpha, cgpa, result) VALUES ('$stu_name', '$stu_roll', '$reg', '$board', '$institute', '$stu_pic', '$ban', '$ban_grade', '$ban_Gpa', '$en', '$en_grade', '$en_Gpa', '$mat', '$mat_grade', '$mat_Gpa', '$sci', '$sci_grade', '$sci_Gpa', '$ss', '$ss_grade', '$ss_Gpa', '$religion', '$religion_grade', '$religion_Gpa', '$grade_alpha', '$stu_cgpa_round', '$result')";
+                $sql = "INSERT INTO students_results (name, roll, reg, board, institute, b_m, b_g, b_c, e_m, e_g, e_c, m_m, m_g, m_c, s_m, s_g, s_c, ss_m, ss_g, ss_c, r_m, r_g, r_c, grade_alpha, cgpa, result) VALUES ('$stu_name', '$stu_roll', '$reg', '$board', '$institute', '$ban', '$ban_grade', '$ban_Gpa', '$en', '$en_grade', '$en_Gpa', '$mat', '$mat_grade', '$mat_Gpa', '$sci', '$sci_grade', '$sci_Gpa', '$ss', '$ss_grade', '$ss_Gpa', '$religion', '$religion_grade', '$religion_Gpa', '$grade_alpha', '$stu_cgpa_round', '$result')";
                 $conn -> query($sql);
 
                 $mess = "<p class='alert alert-success'> Congartualtions, marks are added successfully!<button class='close' data-dismiss='alert'>&times;</button></p>";
@@ -116,6 +116,17 @@
 
                     ?>
                 </div>
+
+
+                <?php if ( $this->session->flashdata('success') ) { ?>
+                    <div class="alert alert-success" role="alert">
+                    <h6><?php echo $this->session->flashdata('success'); ?></h6></div>
+                 <?php } ?>
+
+                 <?php if ( $this->session->flashdata('error') ) { ?>
+                    <div class="alert alert-danger" role="alert">
+                    <h6><?php echo $this->session->flashdata('error'); ?></h6></div>
+                 <?php } ?>
 
 
                     <div class="card" style="padding: 30px;">

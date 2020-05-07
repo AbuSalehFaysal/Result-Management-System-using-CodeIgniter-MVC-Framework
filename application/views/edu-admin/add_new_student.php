@@ -17,46 +17,48 @@
 
     <?php 
 
-        if ( isset($_POST['submit']) ) {
-                        # code...
+        // if ( isset($_POST['submit']) ) {
+        //                 # code...
 
-            // data
-            $stu_name = $_POST['stu_name'];
-            $stu_roll = $_POST['stu_roll'];
-            $reg = $_POST['reg'];
-            $board = $_POST['board'];
-            $institute = $_POST['institute'];
+        //     // data
+        //     $stu_name = $_POST['stu_name'];
+        //     $stu_roll = $_POST['stu_roll'];
+        //     $reg = $_POST['reg'];
+        //     $board = $_POST['board'];
+        //     $institute = $_POST['institute'];
 
-            //file
-            $stu_pic = $_FILES['stu_pic']['name'];
-            $stu_tpic = $_FILES['stu_pic']['tmp_name'];
+        //     //file
+        //     $stu_pic = $_FILES['stu_pic']['name'];
+        //     $stu_tpic = $_FILES['stu_pic']['tmp_name'];
 
-            //make unique pic name
-            $array_pic = explode('.', $stu_pic);
-            $ext = end($array_pic);
-            $upname = md5(time().rand().$stu_pic).'.'.strtolower($ext);
+        //     //make unique pic name
+        //     $array_pic = explode('.', $stu_pic);
+        //     $ext = end($array_pic);
+        //     $upname = md5(time().rand().$stu_pic).'.'.strtolower($ext);
 
-            if (empty($stu_name) || empty($stu_roll) || empty($reg) || empty($board) || empty($institute) || empty($stu_pic) ) {
-                # code...
-                $mess = "<p class='alert alert-danger'> Please, fill the form properly!<button class='close' data-dismiss='alert'>&times;</button></p>";
+        //     if (empty($stu_name) || empty($stu_roll) || empty($reg) || empty($board) || empty($institute) || empty($stu_pic) ) {
+        //         # code...
+        //         $mess = "<p class='alert alert-danger'> Please, fill the form properly!<button class='close' data-dismiss='alert'>&times;</button></p>";
 
-            } else {
-                # code...
-                $sql = "INSERT INTO students_info (stu_name, stu_roll, reg, board, institute,   stu_pic) VALUES ('$stu_name','$stu_roll','$reg','$board','$institute', '$upname')";
-                $conn -> query($sql);
+        //     } else {
+        //         # code...
+        //         $sql = "INSERT INTO students_info (stu_name, stu_roll, reg, board, institute,   stu_pic) VALUES ('$stu_name','$stu_roll','$reg','$board','$institute', '$upname')";
+        //         $conn -> query($sql);
 
-                // move_uploaded_file($stu_tpic, 'edu-admin/students_pic/'.$upname);
+        //         // move_uploaded_file($stu_tpic, 'edu-admin/students_pic/'.$upname);
 
-                $mess = "<p class='alert alert-success'>The information is added successfully, Congratulations!<button class='close' data-dismiss='alert'>&times;</button></p>";
+        //         $mess = "<p class='alert alert-success'>The information is added successfully, Congratulations!<button class='close' data-dismiss='alert'>&times;</button></p>";
 
-            }
+        //     }
             
 
-        }
+        // }
                         
 
 
         ?>
+
+                
 
         <div class="mess">
                     <?php  
@@ -69,11 +71,21 @@
                     ?>
                 </div>
 
+                <?php if ( $this->session->flashdata('success') ) { ?>
+                    <div class="alert alert-success" role="alert">
+                    <h6><?php echo $this->session->flashdata('success'); ?></h6></div>
+                 <?php } ?>
+
+                 <?php if ( $this->session->flashdata('error') ) { ?>
+                    <div class="alert alert-danger" role="alert">
+                    <h6><?php echo $this->session->flashdata('error'); ?></h6></div>
+                 <?php } ?>
+
 
                     <div class="card" style="padding: 30px;">
                     <div class="card-header"></div>
                     <div class="card-body">
-                        <form action="<?php echo base_url(); ?>edu-admin/add_new_student" method="POST" enctype="multipart/form-data">
+                        <form action="<?php echo base_url(); ?>edu-admin/add_new_student_data" method="POST" enctype="multipart/form-data">
 
                             <div class="form-group">
                                 <label for="">Student Name</label>
@@ -100,10 +112,10 @@
                                 <input name="institute" class="form-control" type="text">
                             </div>
 
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label for="">Student Photo</label>
                                 <input name="stu_pic" class="" type="file">
-                            </div>
+                            </div> -->
 
                             <div class="form-group">
                                 

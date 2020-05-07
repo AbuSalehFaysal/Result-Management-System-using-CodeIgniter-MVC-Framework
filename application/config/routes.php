@@ -70,5 +70,7 @@ $route['edu-admin/add_new_student'] = 'admin/add_new_student';
 $route['edu-admin/add_result'] = 'admin/add_result';
 $route['edu-admin/update_result'] = 'admin/update_result';
 $route['edu-admin/delete_student'] = 'admin/delete_student';
+$route['edu-admin/add_new_student_data'] = 'admin/add_new_student_data';
+$route['edu-admin/admin_data'] = 'admin/admin_data';
 
 

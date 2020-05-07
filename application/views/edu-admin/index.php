@@ -27,53 +27,65 @@
 
                 <?php  
 
-                           if( isset($_POST['submit']) ){
+                           // if( isset($_POST['submit']) ){
 
 
-                               $pass = $_POST['pass'];
-                               $email = $_POST['email'];
+                           //     $pass = $_POST['pass'];
+                           //     $email = $_POST['email'];
 
 
 
-                               if( empty($email) || empty($pass) ){
-                                   $mess = "<p class='alert alert-danger'> Please, fill the form properly!<button class='close' data-dismiss='alert'>&times;</button></p>";
-                               }else {
+                           //     if( empty($email) || empty($pass) ){
+                           //         $mess = "<p class='alert alert-danger'> Please, fill the form properly!<button class='close' data-dismiss='alert'>&times;</button></p>";
+                           //     }else {
 
-                                   $sql = "SELECT * FROM user_admin WHERE email='$email'";
-                                   $data = $conn -> query($sql);
-                                   $login_data = $data -> fetch_assoc();
+                           //         $sql = "SELECT * FROM user_admin WHERE email='$email'";
+                           //         $data = $conn -> query($sql);
+                           //         $login_data = $data -> fetch_assoc();
 
                                    
                                     
-                                   if($login_data['email'] == $email ){
+                           //         if($login_data['email'] == $email ){
 
                                             
 
-                                        if( $login_data['pass'] == $pass ){
+                           //              if( $login_data['pass'] == $pass ){
 
-                                            // $_SESSION['name'] = $login_data['name'];
+                           //                  // $_SESSION['name'] = $login_data['name'];
 
-                                            $_SESSION['name'] = $login_data['name'];
+                           //                  $_SESSION['name'] = $login_data['name'];
 
-                                            header("location:".base_url()."edu-admin/dashboard");
+                           //                  header("location:".base_url()."edu-admin/dashboard");
 
-                                        }else{
-                                            $mess = "<p class='alert alert-danger'> Wrong Password!<button class='close' data-dismiss='alert'>&times;</button></p>";
-                                        }
-
-
-                                   }else{
-                                        $mess = "<p class='alert alert-danger'> Email is not valid !<button class='close' data-dismiss='alert'>&times;</button></p>";
-                                   }
+                           //              }else{
+                           //                  $mess = "<p class='alert alert-danger'> Wrong Password!<button class='close' data-dismiss='alert'>&times;</button></p>";
+                           //              }
 
 
-                               }   
+                           //         }else{
+                           //              $mess = "<p class='alert alert-danger'> Email is not valid !<button class='close' data-dismiss='alert'>&times;</button></p>";
+                           //         }
 
 
-                           }
+                           //     }   
+
+
+                           // }
 
 
                        ?>
+
+                       <?php if ( $this->session->flashdata('success') ) { ?>
+                    <div class="alert alert-success" role="alert">
+                    <h6><?php echo $this->session->flashdata('success'); ?></h6></div>
+                 <?php } ?>
+
+                 <?php if ( $this->session->flashdata('error') ) { ?>
+                    <div class="alert alert-danger" role="alert">
+                    <h6><?php echo $this->session->flashdata('error'); ?></h6></div>
+                 <?php } ?>
+
+
 
 
                  <div class="mess">
@@ -92,9 +104,11 @@
                 <form action="<?php echo base_url(); ?>edu-admin/index" method="POST">
                     <div class="list-group">
                         <div class="list-group-item">
-                            <input name="email" type="text" placeholder="Email" class="form-control no-border"> </div>
+                          <label>Email</label>
+                            <input name="email" type="text" placeholder="" class="form-control no-border"> </div>
                         <div class="list-group-item">
-                            <input name="pass" type="password" placeholder="Password" class="form-control no-border"> </div>
+                          <label>Password</label>
+                            <input name="pass" type="password" placeholder="" class="form-control no-border"> </div>
                     </div>
                     <button name="submit" type="submit" class="btn btn-lg btn-primary btn-block">Sign in</button>
                     <div class="text-center m-t m-b"><a href=""><small></small></a></div>

@@ -29,46 +29,59 @@
                 <?php 
 
 
-                if (isset($_POST['submit'])) {
-                    # code...
-                    $name = $_POST['name'];
-                    $email = $_POST['email'];
+                // if (isset($_POST['submit'])) {
+                // //     # code...
+                // //     $name = $_POST['name'];
+                // //     $email = $_POST['email'];
+                //         $mess = "<p class='alert alert-danger'>Please, fill the form properly!<button class='close' data-dismiss='alert'>&times;</button></p>";
 
-
-                    //password hashing
-                    $pass = $_POST['pass'];
+                //     //password hashing
+                //     $pass = $_POST['pass'];
                     // $hash_pass = password_hash($pass, PASSWORD_DEFAULT);
                     
 
-                    if( isset($_POST['check']) AND $_POST['check'] == 'Agree' ){ 
+                    // if( isset($_POST['check']) AND $_POST['check'] == 'Agree' ){ 
 
                   
-                        # code...
-                        $allow = true;
-                    } else {
-                        # code...
-                        $allow = false;
-                    }
+                    //     # code...
+                    //     $allow = true;
+                    // } else {
+                    //     # code...
+                    //     $allow = false;
+                    // }
                     
 
-                    if (empty($name) || empty($email) || empty($pass)) {
+                    // if (empty($name) || empty($email) || empty($pass)) {
                         # code...
-                        $mess = "<p class='alert alert-danger'>Please, fill the form properly!<button class='close' data-dismiss='alert'>&times;</button></p>";
-                    }elseif ($allow == false) {
+                        
+                    // }elseif ($allow == false) {
                         # code...
-                        $mess = "<p class='alert alert-danger'>Please, agree with the terms and condiotion!<button class='close' data-dismiss='alert'>&times;</button></p>";
-                    } else {
+                        // $mess = "<p class='alert alert-danger'>Please, agree with the terms and condiotion!<button class='close' data-dismiss='alert'>&times;</button></p>";
+                    // } else {
                         # code...
-                        $sql = "INSERT INTO user_admin (name, email, pass, status) VALUES ('$name','$email','$pass','active')";
-                        $conn -> query($sql);
+                        // $sql = "INSERT INTO user_admin (name, email, pass, status) VALUES ('$name','$email','$pass','active')";
+                        // $conn -> query($sql);
 
-                        $mess = "<p class='alert alert-success'>Congratulations!<button class='close' data-dismiss='alert'>&times;</button></p>";
-                    }
+                        // $mess = "<p class='alert alert-success'>Congratulations!<button class='close' data-dismiss='alert'>&times;</button></p>";
+                //     }
                     
-                }
+                // }
+
+                    // }
 
 
                  ?>
+
+
+                 <?php if ( $this->session->flashdata('success') ) { ?>
+                    <div class="alert alert-success" role="alert">
+                    <h6><?php echo $this->session->flashdata('success'); ?></h6></div>
+                 <?php } ?>
+
+                 <?php if ( $this->session->flashdata('error') ) { ?>
+                    <div class="alert alert-danger" role="alert">
+                    <h6><?php echo $this->session->flashdata('error'); ?></h6></div>
+                 <?php } ?>
 
                  <div class="mess">
                     <?php  
@@ -84,19 +97,30 @@
 
 
 
-                <form action="<?php echo base_url(); ?>edu-admin/signup" method="POST">
+                <form name="signUp" action="<?php echo base_url(); ?>edu-admin/admin_data" method="post">
                     <div class="list-group">
                         <div class="list-group-item">
-                            <input name="name" placeholder="Name" class="form-control no-border"> </div>
+                            <label>Name</label>
+                            <input name="name" placeholder="" class="form-control no-border" 
+                            value="<?php echo set_value('name'); ?>"> 
+                        </div>
+
                         <div class="list-group-item">
-                            <input name="email" type="text" placeholder="Email" class="form-control no-border"> </div>
+                            <label>Email</label>
+                            <input name="email" type="text" placeholder="" class="form-control no-border" value="<?php echo set_value('email'); ?>"> 
+                        </div>
+
                         <div class="list-group-item">
-                            <input name="pass" type="password" placeholder="Password" class="form-control no-border"> </div>
+                            <label>Password</label>
+                            <input name="pass" type="password" placeholder="" class="form-control no-border"> 
+                        </div>
+
                     </div>
-                    <div class="checkbox m-b">
+
+                    <!-- <div class="checkbox m-b">
                         <label>
                             <input name="check" value="Agree" type="checkbox"> Agree the <a href="#">terms and policy</a> </label>
-                    </div>
+                    </div> -->
                     <button name="submit"  type="submit" class="btn btn-lg btn-primary btn-block">Sign up</button>
                     <div class="line line-dashed"></div>
                     <p class="text-muted text-center"><small>Already have an account?</small></p> <a href="<?php echo base_url(); ?>edu-admin/index" class="btn btn-lg btn-default btn-block">Sign in</a> 

@@ -14,6 +14,16 @@
                 
                 <div class="panel-heading b-b"> <span class="badge bg-warning pull-right">10</span> <a href="#" class="font-bold">All Students Information</a> </div>
 
+                <?php if ( $this->session->flashdata('success') ) { ?>
+                    <div class="alert alert-success" role="alert">
+                    <h6><?php echo $this->session->flashdata('success'); ?></h6></div>
+                 <?php } ?>
+
+                 <?php if ( $this->session->flashdata('error') ) { ?>
+                    <div class="alert alert-danger" role="alert">
+                    <h6><?php echo $this->session->flashdata('error'); ?></h6></div>
+                 <?php } ?>
+
                 <div class="card">
                     <div class="card-body">
                         <table class="table table-striped table-hover">
@@ -25,7 +35,7 @@
                                     <th>Registration No</th>
                                     <th>Board</th>
                                     <th>Institute</th>
-                                    <th>Student Photo</th>
+                                    
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -52,7 +62,7 @@
                                     <th><?php echo $all_students_data['reg']; ?></th>
                                     <th><?php echo $all_students_data['board']; ?></th>
                                     <th><?php echo $all_students_data['institute']; ?></th>
-                                    <th><img style="width: 50px; height: 50px;" src="<?php echo $all_students_data['stu_pic']; ?>" alt="Photo"></th>
+                                    
 
 
                                     <?php 
