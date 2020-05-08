@@ -12,7 +12,7 @@
         <div class="col-md-10" style="margin: 50px 20px 50px 50px;">
              <section class="panel b-a" style="min-height: 400px;">
                 
-                <div class="panel-heading b-b"> <span class="badge bg-warning pull-right">10</span> <a href="#" class="font-bold">Please, fill the form</a> </div>
+                <div class="panel-heading b-b"> <span class="badge bg-warning pull-right"></span> <a href="#" class="font-bold">Please, fill the form</a> </div>
 
 
     <?php 

@@ -13,7 +13,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Scale | Web Application</title>
+    <title>Admin Signup</title>
     <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="../assets/css/app.v1.css" type="text/css" />
@@ -22,9 +22,9 @@
 
 <body class="">
     <section id="content" class="m-t-lg wrapper-md animated fadeInDown">
-        <div class="container aside-xl"> <a class="navbar-brand block" href="index.html">Scale</a>
+        <div class="container aside-xl"> <a class="navbar-brand block" href="index.html">Admin Panel</a>
             <section class="m-b-lg">
-                <header class="wrapper text-center"> <strong>Sign up to find interesting thing</strong> </header>
+                <header class="wrapper text-center"> <strong>Sign up to access student database</strong> </header>
                 
                 <?php 
 
