@@ -35,6 +35,25 @@
 			$this->db->insert('students_info',$studentData);
 		}
 
+		// public function getStudent($student_sl)
+		// {
+		// 	$this->db->where('stu_sl',$student_sl)
+		// 	return $student = $this->db->get('students_info')->row_array();
+		// }
+
+
+		// public function insert_student_mark ()
+		// {
+		// 	$studentMark = array(); 
+		// 	$studentMark['b_m'] = $this->input->post('ban',true);
+		// 	$studentMark['e_m'] = $this->input->post('en',true);
+		// 	$studentMark['m_m'] = $this->input->post('mat',true);
+		// 	$studentMark['s_m'] = $this->input->post('sci',true);
+		// 	$studentMark['ss_m'] = $this->input->post('ss',true);
+		// 	$studentMark['r_m'] = $this->input->post('religion',true);
+		// 	$this->db->insert('students_results',$studentMark);
+		// }
+
 		
 	}
 

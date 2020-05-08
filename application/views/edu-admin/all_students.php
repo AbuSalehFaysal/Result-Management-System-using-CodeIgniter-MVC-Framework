@@ -84,7 +84,7 @@
 
                                     <th><a class="btn btn-info" href="<?php echo base_url(); ?>edu-admin/add_result?sl=<?php echo $all_students_data['stu_sl']; ?>">Add Result</a></th>
 
-                                    <th><a class="btn btn-info" href="<?php echo base_url(); ?>edu-admin/delete_student?sl=<?php echo $all_students_data['stu_sl']; ?>">Delete</a></th>
+                                    <th><a class="btn btn-danger" href="<?php echo base_url(); ?>edu-admin/delete_student?sl=<?php echo $all_students_data['stu_sl']; ?>">Delete</a></th>
 
                                     
 

@@ -28,8 +28,9 @@ class Admin extends CI_Controller {
 			 	redirect(base_url().'edu-admin/dashboard');
 			 } else {
 			 	# code...
-			 	$this->load->view('edu-admin/index');
 			 	$this->session->set_flashdata('error', 'Wrong Email or Password!');
+			 	$this->load->view('edu-admin/index');
+			 	
 			 }
 			  
 
@@ -136,11 +137,33 @@ class Admin extends CI_Controller {
 	}
 
 	public function add_result()
-	{
-		
-		
+	{	
 		$this->load->view('edu-admin/add_result');
 	}
+
+	// public function add_mark($student_sl)
+	// {
+	// 	$this->load->model('admin_model');
+	// 	$student = $this->admin_model->getStudent($student_sl);
+	// 	$this->form_validation->set_rules('ban','Bangla','required');
+	// 	$this->form_validation->set_rules('en','English','required');
+	// 	$this->form_validation->set_rules('mat','Math','required');
+	// 	$this->form_validation->set_rules('sci','Science','required');
+	// 	$this->form_validation->set_rules('ss','Social Science','required');
+	// 	$this->form_validation->set_rules('religion','Religion','required');
+	// 	if ( $this->form_validation->run()==false ) {
+	// 		# code...
+	// 		$this->load->view('edu-admin/add_result');
+	// 		$this->session->set_flashdata('error', 'Please, fill the form properly!');
+	// 	} else {
+	// 		# code...
+	// 		$this->admin_model->insert_student_mark();
+	// 		$this->session->set_flashdata('success', 'Congatulations!');
+	// 		$this->load->view('edu-admin/add_result');
+	// 	}
+		
+	// 	$this->load->view('edu-admin/add_result');
+	// }
 
 	public function update_result()
 	{
