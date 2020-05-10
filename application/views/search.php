@@ -122,26 +122,6 @@
 						</tr>
 
 
-<!-- 					
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- -->
-
-
-
 						<tr>
 							<td>Bangla</td>
 							<td><?php echo $show_result['b_m']; ?></td>

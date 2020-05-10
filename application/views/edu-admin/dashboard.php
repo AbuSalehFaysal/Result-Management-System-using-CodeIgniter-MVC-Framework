@@ -7,34 +7,34 @@
                                     
                                     
                                     <!-- ADMIN PANEL SECTION -->
-                                    <div class="row">
-                                        
-                                        <div class="col-md-10" style="margin: 50px 0px 50px 50px;">
-                                            <section class="panel b-a" style="min-height: 500px;">
-                                                <div class="panel-heading b-b"> <span class="badge bg-warning pull-right"></span> <a href="#" class="font-bold">Message</a> </div>
+    <div class="row">
+        
+        <div class="col-md-10" style="margin: 50px 0px 50px 50px;">
+            <section class="panel b-a" style="min-height: 500px;">
+                <div class="panel-heading b-b"> <span class="badge bg-warning pull-right"></span> <a href="#" class="font-bold">Message</a> </div>
 
-                                                <h2>Welcome to Dashboard</h2>
-
-
-
-                                               
+                <h2>Welcome to Dashboard</h2>
 
 
-                                            </section>
-                                        </div>
+
+               
+
+
+            </section>
+        </div>
 
 
 
 
                                        
-                                    </div>
+    </div>
                                 
 
 
-                                <?php 
+    <?php 
 
 
-                                    require_once "template/footer.php";
+        require_once "template/footer.php";
 
 
-                                 ?>
+     ?>

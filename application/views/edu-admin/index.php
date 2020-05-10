@@ -24,57 +24,6 @@
             <section class="m-b-lg">
                 <header class="wrapper text-center"> <strong>Sign in to get in touch</strong> </header>
 
-
-                <?php  
-
-                           // if( isset($_POST['submit']) ){
-
-
-                           //     $pass = $_POST['pass'];
-                           //     $email = $_POST['email'];
-
-
-
-                           //     if( empty($email) || empty($pass) ){
-                           //         $mess = "<p class='alert alert-danger'> Please, fill the form properly!<button class='close' data-dismiss='alert'>&times;</button></p>";
-                           //     }else {
-
-                           //         $sql = "SELECT * FROM user_admin WHERE email='$email'";
-                           //         $data = $conn -> query($sql);
-                           //         $login_data = $data -> fetch_assoc();
-
-                                   
-                                    
-                           //         if($login_data['email'] == $email ){
-
-                                            
-
-                           //              if( $login_data['pass'] == $pass ){
-
-                           //                  // $_SESSION['name'] = $login_data['name'];
-
-                           //                  $_SESSION['name'] = $login_data['name'];
-
-                           //                  header("location:".base_url()."edu-admin/dashboard");
-
-                           //              }else{
-                           //                  $mess = "<p class='alert alert-danger'> Wrong Password!<button class='close' data-dismiss='alert'>&times;</button></p>";
-                           //              }
-
-
-                           //         }else{
-                           //              $mess = "<p class='alert alert-danger'> Email is not valid !<button class='close' data-dismiss='alert'>&times;</button></p>";
-                           //         }
-
-
-                           //     }   
-
-
-                           // }
-
-
-                       ?>
-
                        <?php if ( $this->session->flashdata('success') ) { ?>
                     <div class="alert alert-success" role="alert">
                     <h6><?php echo $this->session->flashdata('success'); ?></h6></div>
@@ -85,20 +34,6 @@
                     <h6><?php echo $this->session->flashdata('error'); ?></h6></div>
                  <?php } ?>
 
-
-
-
-                 <div class="mess">
-                    <?php  
-
-                        if( isset($mess) ){
-                        echo $mess;
-                        
-                        }
-
-                    ?>
-                </div>
-    
 
 
                 <form action="<?php echo base_url(); ?>edu-admin/index" method="POST">

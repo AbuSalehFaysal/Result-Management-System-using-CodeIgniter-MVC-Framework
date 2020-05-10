@@ -53,36 +53,7 @@ class Admin extends CI_Controller {
 
 	public function signup()
 	{
-		// $this->load->model('admin_model');
-		// $this->form_validation->set_rules('name','Name','required');
-		// $this->form_validation->set_rules('email','Email','required|valid_email');
-		// $this->form_validation->set_rules('pass','Password','required');
-		$this->load->view('edu-admin/signup');
-		// if ($this->form_validation->run()==false) {
-		// 	# code...
-		// 	$this->load->view('edu-admin/signup');
-		// 	$this->session->set_flashdata('error', 'Please, fill the form properly!');
-			
-
-		// } else {
-		// 	# code...
-		// 	$formArray = array();
-		// 	$formArray['name'] = $this->input->post('name');
-		// 	$formArray['email'] = $this->input->post('email');
-		// 	$formArray['pass'] = $this->input->post('pass');
-		// 	$formArray['status'] = 'active';
-
-		// 	$this->admin_model->signup($formArray);
-		// 	// $message = array('message' => 'Congatulations, you can login now!','class' => 'alert alert-success fade in');
-			
-		// 	$this->session->set_flashdata('success', 'Congatulations, you can sign in now!');
-		// 	redirect(base_url().'edu-admin/signup');
-			
-
-		// }
-
-
-		
+		$this->load->view('edu-admin/signup');	
 	}
 
 	public function admin_data()
@@ -153,35 +124,10 @@ class Admin extends CI_Controller {
 		$this->load->view('edu-admin/add_result');
 	}
 
-	// public function add_mark($student_sl)
-	// {
-	// 	$this->load->model('admin_model');
-	// 	$student = $this->admin_model->getStudent($student_sl);
-	// 	$this->form_validation->set_rules('ban','Bangla','required');
-	// 	$this->form_validation->set_rules('en','English','required');
-	// 	$this->form_validation->set_rules('mat','Math','required');
-	// 	$this->form_validation->set_rules('sci','Science','required');
-	// 	$this->form_validation->set_rules('ss','Social Science','required');
-	// 	$this->form_validation->set_rules('religion','Religion','required');
-	// 	if ( $this->form_validation->run()==false ) {
-	// 		# code...
-	// 		$this->load->view('edu-admin/add_result');
-	// 		$this->session->set_flashdata('error', 'Please, fill the form properly!');
-	// 	} else {
-	// 		# code...
-	// 		$this->admin_model->insert_student_mark();
-	// 		$this->session->set_flashdata('success', 'Congatulations!');
-	// 		$this->load->view('edu-admin/add_result');
-	// 	}
-		
-	// 	$this->load->view('edu-admin/add_result');
-	// }
 
 	public function update_result($stu_roll)
 	{
 		$this->load->model('admin_model');
-		// $results = $this->admin_model->getSingleStudentmarks($stu_roll);
-		// $this->load->view('edu-admin/update_marks',['$results'=>results]);
 		$results = $this->admin_model->getSingleStudentmarks($stu_roll);
 		$this->load->view('edu-admin/update_marks',['results'=>$results]);
 	}
@@ -196,9 +142,6 @@ class Admin extends CI_Controller {
 		$this->load->model('admin_model');
 		$students = $this->admin_model->getSingleStudentinfo($stu_sl);
 		$this->load->view('edu-admin/view',['students'=>$students]);
-		
-		// $results = $this->admin_model->getSingleStudentmarks($result_sl);
-		// $this->load->view('edu-admin/view',['results'=>$results]);
 	}
 
 	public function delete($stu_sl)
@@ -253,12 +196,9 @@ class Admin extends CI_Controller {
 
 	public function searchstudent()
 	{
-		
-		$this->load->model('admin_model');
-		
+		$this->load->model('admin_model');	
 		$results = $this->admin_model->getStudentResult();
 		$this->load->view('search',['results'=>$results]);
-		// $this->load->view('edu-admin/update_marks',['results'=>$results]);
 	}
 }
 
@@ -277,15 +217,3 @@ class Admin extends CI_Controller {
 
 
 
-
-
-<div class="mess">
-                    <?php  
-
-                        if( isset($mess) ){
-                        echo $mess;
-                        
-                        }
-
-                    ?>
-                </div>

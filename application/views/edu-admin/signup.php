@@ -25,52 +25,6 @@
         <div class="container aside-xl"> <a class="navbar-brand block" href="index.html">Admin Panel</a>
             <section class="m-b-lg">
                 <header class="wrapper text-center"> <strong>Sign up to access student database</strong> </header>
-                
-                <?php 
-
-
-                // if (isset($_POST['submit'])) {
-                // //     # code...
-                // //     $name = $_POST['name'];
-                // //     $email = $_POST['email'];
-                //         $mess = "<p class='alert alert-danger'>Please, fill the form properly!<button class='close' data-dismiss='alert'>&times;</button></p>";
-
-                //     //password hashing
-                //     $pass = $_POST['pass'];
-                    // $hash_pass = password_hash($pass, PASSWORD_DEFAULT);
-                    
-
-                    // if( isset($_POST['check']) AND $_POST['check'] == 'Agree' ){ 
-
-                  
-                    //     # code...
-                    //     $allow = true;
-                    // } else {
-                    //     # code...
-                    //     $allow = false;
-                    // }
-                    
-
-                    // if (empty($name) || empty($email) || empty($pass)) {
-                        # code...
-                        
-                    // }elseif ($allow == false) {
-                        # code...
-                        // $mess = "<p class='alert alert-danger'>Please, agree with the terms and condiotion!<button class='close' data-dismiss='alert'>&times;</button></p>";
-                    // } else {
-                        # code...
-                        // $sql = "INSERT INTO user_admin (name, email, pass, status) VALUES ('$name','$email','$pass','active')";
-                        // $conn -> query($sql);
-
-                        // $mess = "<p class='alert alert-success'>Congratulations!<button class='close' data-dismiss='alert'>&times;</button></p>";
-                //     }
-                    
-                // }
-
-                    // }
-
-
-                 ?>
 
 
                  <?php if ( $this->session->flashdata('success') ) { ?>
@@ -117,10 +71,7 @@
 
                     </div>
 
-                    <!-- <div class="checkbox m-b">
-                        <label>
-                            <input name="check" value="Agree" type="checkbox"> Agree the <a href="#">terms and policy</a> </label>
-                    </div> -->
+
                     <button name="submit"  type="submit" class="btn btn-lg btn-primary btn-block">Sign up</button>
                     <div class="line line-dashed"></div>
                     <p class="text-muted text-center"><small>Already have an account?</small></p> <a href="<?php echo base_url(); ?>edu-admin/index" class="btn btn-lg btn-default btn-block">Sign in</a> 
@@ -132,11 +83,7 @@
             </section>
         </div>
     </section>
-    <!-- footer -->
-    
-    <!-- / footer -->
-    <!-- Bootstrap -->
-    <!-- App -->
+
     <script src="../assets/js/app.v1.js"></script>
     <script src="../assets/js/app.plugin.js"></script>
 </body>

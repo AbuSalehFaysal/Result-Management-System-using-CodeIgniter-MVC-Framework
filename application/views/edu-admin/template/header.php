@@ -68,12 +68,7 @@
                     </section>
                 </li>
             </ul>
-            <!-- <form class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs" role="search">
-                <div class="form-group">
-                    <div class="input-group"> <span class="input-group-btn"> <button type="submit" class="btn btn-sm bg-white b-white btn-icon"><i class="fa fa-search"></i></button> </span>
-                        <input type="text" class="form-control input-sm no-border" placeholder="Search apps, projects..."> </div>
-                </div>
-            </form> -->
+           
             <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
                 <li class="hidden-xs">
                     <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="i i-chat3"> --></i> <span class="badge badge-sm up bg-danger count"></span> </a>
@@ -88,19 +83,7 @@
                         </section>
                     </section>
                 </li>
-                <!-- <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="../assets/images/a0.png" alt="..."> </span> <?php //echo $_SESSION['name']; ?> <b class="caret"></b> </a>
-                    <ul class="dropdown-menu animated fadeInRight">
-                        <li> <span class="arrow top"></span> <a href="#">Settings</a> </li>
-                        <li> <a href="profile.html">Profile</a> </li>
-                        <li>
-                            <a href="#"> <span class="badge bg-danger pull-right">3</span> Notifications </a>
-                        </li>
-                        <li> <a href="docs.html">Help</a> </li>
-                        <li class="divider"></li>
-                        <li> <a href="inc/logout.php" >Logout</a> </li>
-                    </ul>
-                </li> -->
+              
             </ul>
         </header>
         <section>
@@ -138,16 +121,6 @@
                                         <li>
                                             <a href="<?php echo base_url(); ?>edu-admin/all_students" class="auto"> <span class="pull-right text-muted"> <i class="i i-circle-sm-o text"></i> <i class="i i-circle-sm text-active"></i> </span> <b class="badge bg-danger pull-right"></b> <i class="i i-stack icon"> </i> <span class="font-bold">All Students</span> </a>
                                             <ul class="nav dk">
-
-                                            
-
-
-                                                <!-- <li>
-                                                    <a href="all_students.php" class="auto"> <i class="i i-dot"></i> <span>All Students</span> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="add_new_student.php" class="auto"> <i class="i i-dot"></i> <span>Add New Student</span> </a>
-                                                </li> -->
                                                 
                                             </ul>
                                         </li>
@@ -156,16 +129,6 @@
                                             <a href="<?php echo base_url(); ?>edu-admin/add_new_student" class="auto"> <span class="pull-right text-muted"> <i class="i i-circle-sm-o text"></i> <i class="i i-circle-sm text-active"></i> </span> <b class="badge bg-danger pull-right"></b> <i class="i i-stack icon"> </i> <span class="font-bold">Add New Student</span> </a>
                                             <ul class="nav dk">
 
-                                            
-
-
-                                                <!-- <li>
-                                                    <a href="all_students.php" class="auto"> <i class="i i-dot"></i> <span>All Students</span> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="add_new_student.php" class="auto"> <i class="i i-dot"></i> <span>Add New Student</span> </a>
-                                                </li> -->
-                                                
                                             </ul>
                                         </li>
                                         
