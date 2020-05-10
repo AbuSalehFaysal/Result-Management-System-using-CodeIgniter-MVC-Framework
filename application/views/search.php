@@ -1,3 +1,4 @@
+<?php $conn = new mysqli('localhost','root','','edu_board'); ?>
 <?php 
 
 		require_once "edu-admin/libs/function.php";
@@ -46,7 +47,7 @@
 	<div class="wraper">
 		<div class="w-top">
 			<div class="logo">
-				<img src="" alt="">
+				
 			</div>
 			<div class="banner">
 				<h3></h3>
@@ -59,7 +60,7 @@
 
 				<div class="student-info">
 					<div class="student-photo">
-						<img src="edu-admin/students_pic/<?php echo $show_result['stu_pic']; ?>" alt="">
+						<img src="assets/images/p10.jpg" alt="">
 					</div>
 					<div class="student-details">
 						<table>
@@ -95,7 +96,7 @@
 
 									<?php 
 
-								else : 
+								else : // 
 									?>
 
 								<td><span style="color:red;font-weight:bold;">Failed<span></td>	

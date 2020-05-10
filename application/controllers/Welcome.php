@@ -13,4 +13,16 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('search');
 	}
+
+	public function searchstudent()
+	{
+		$Board = $this->input->post('Board');
+		$roll = $this->input->post('roll');
+		$reg = $this->input->post('reg');
+		$this->load->model('admin_model');
+		
+		$showResult = $this->admin_model->getStudentResult($Board, $roll, $reg);
+		$this->load->view('search',['showResult'=>$showResult]);
+		// $this->load->view('edu-admin/update_marks',['results'=>$results]);
+	}
 }

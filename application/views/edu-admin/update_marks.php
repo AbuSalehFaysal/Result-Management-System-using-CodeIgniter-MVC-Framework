@@ -1,3 +1,6 @@
+
+
+
 <?php 
 
     require_once "template/header.php"; 
@@ -25,20 +28,51 @@
         //         $SL = '';
         //     }
 
+        //     $sql = "SELECT * FROM students_results WHERE result_sl='$SL' ";
+        //     $result= $conn -> query($sql);
+
+        //     $single_result = $result -> fetch_assoc();
+
+        //     $stu_name = $single_result['name'];
+        //     $stu_roll = $single_result['roll'];
+        //     $reg = $single_result['reg'];
+        //     $board = $single_result['board'];
+        //     $institute = $single_result['institute'];
+        //     $stu_pic = $single_result['stu_pic'];
+        //     $ban = $single_result['b_m'];
+        //     $ban_grade = $single_result['b_g'];
+        //     $ban_Gpa = $single_result['b_c'];
+        //     $en = $single_result['e_m'];
+        //     $en_grade = $single_result['e_g'];
+        //     $en_Gpa = $single_result['e_c'];
+        //     $mat = $single_result['m_m'];
+        //     $mat_grade = $single_result['m_g'];
+        //     $mat_Gpa = $single_result['m_c'];
+        //     $sci = $single_result['s_m'];
+        //     $sci_grade = $single_result['s_g'];
+        //     $sci_Gpa = $single_result['s_c'];
+        //     $ss = $single_result['ss_m'];
+        //     $ss_grade = $single_result['ss_g'];
+        //     $ss_Gpa = $single_result['ss_c'];
+        //     $religion = $single_result['r_m'];
+        //     $religion_grade = $single_result['r_g'];
+        //     $religion_Gpa = $single_result['r_c'];
+        //     $grade_alpha = $single_result['grade_alpha'];
+        //     $stu_cgpa_round = $single_result['cgpa'];
+        //     $result = $single_result['result'];
+
         // if ( isset($_POST['submit']) ) {
         //                 # code...
 
-        // $sql = "SELECT * FROM students_info WHERE stu_sl='$SL' ";
-        // $data = $conn -> query($sql);
+        
 
-        // $single_data = $data -> fetch_assoc();
+        // //, , , , , , , , , , , , , , , , , , , , , , , , , , 
 
-        // $stu_name = $single_data['stu_name'];
-        // $stu_roll = $single_data['stu_roll'];
-        // $reg = $single_data['reg'];
-        // $board = $single_data['board'];
-        // $institute = $single_data['institute'];
-        // // $stu_pic = $single_data['stu_pic'];
+        // //$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$', '$'
+
+        
+        
+        
        
 
 
@@ -90,7 +124,7 @@
         //         // $b = "";  
 
 
-        //         $sql = "INSERT INTO students_results (name, roll, reg, board, institute, b_m, b_g, b_c, e_m, e_g, e_c, m_m, m_g, m_c, s_m, s_g, s_c, ss_m, ss_g, ss_c, r_m, r_g, r_c, grade_alpha, cgpa, result) VALUES ('$stu_name', '$stu_roll', '$reg', '$board', '$institute', '$ban', '$ban_grade', '$ban_Gpa', '$en', '$en_grade', '$en_Gpa', '$mat', '$mat_grade', '$mat_Gpa', '$sci', '$sci_grade', '$sci_Gpa', '$ss', '$ss_grade', '$ss_Gpa', '$religion', '$religion_grade', '$religion_Gpa', '$grade_alpha', '$stu_cgpa_round', '$result')";
+        //         $sql = "UPDATE students_results SET name='$stu_name', roll='$stu_roll', reg='$reg', board='$board', institute='$institute', stu_pic='$stu_pic', b_m='$ban', b_g='$ban_grade', b_c='$ban_Gpa', e_m='$en', e_g='$en_grade', e_c='$en_Gpa', m_m='$mat', m_g='$mat_grade', m_c='$mat_Gpa', s_m='$sci', s_g='$sci_grade', s_c='$sci_Gpa', ss_m='$ss', ss_g='$ss_grade', ss_c='$ss_Gpa', r_m='$religion', r_g='$religion_grade', r_c='$religion_Gpa', grade_alpha='$grade_alpha', cgpa='$stu_cgpa_round', result='$result' WHERE result_sl='$SL' " ;
         //         $conn -> query($sql);
 
         //         $mess = "<p class='alert alert-success'> Congartualtions, marks are added successfully!<button class='close' data-dismiss='alert'>&times;</button></p>";
@@ -118,75 +152,44 @@
                 </div>
 
 
-                <?php if ( $this->session->flashdata('success') ) { ?>
-                    <div class="alert alert-success" role="alert">
-                    <h6><?php echo $this->session->flashdata('success'); ?></h6></div>
-                 <?php } ?>
-
-                 <?php if ( $this->session->flashdata('error') ) { ?>
-                    <div class="alert alert-danger" role="alert">
-                    <h6><?php echo $this->session->flashdata('error'); ?></h6></div>
-                 <?php } ?>
-
-
                     <div class="card" style="padding: 30px;">
                     <div class="card-header"></div>
                     <div class="card-body">
-                        <form action="<?php echo base_url(); ?>add_student_mark/<?php echo $students->stu_sl ?>" method="POST">
+                        <form action="<?php echo base_url(); ?>edit_marks" method="POST">
 
                             <div class="form-group">
                                 <label for="">Bangla</label>
-                                <input name="ban" class="form-control" type="text">
+                                <input name="ban" class="form-control" type="text" value="<?php echo $results->b_m; ?>">
                             </div>
 
                             <div class="form-group">
-                                
-                                <input name="stu_name" class="form-control" type="hidden" value="<?php echo $students->stu_name ?>">
+                                <label for=""></label>
+                                <input name="result_sl" class="form-control" type="hidden" value="<?php echo $results->result_sl; ?>">
                             </div>
 
                             <div class="form-group">
                                 <label for="">English</label>
-                                <input name="en" class="form-control" type="text">
-                            </div>
-
-                            <div class="form-group">
-                                
-                                <input name="stu_roll" class="form-control" type="hidden" value="<?php echo $students->stu_roll ?>">
+                                <input name="en" class="form-control" type="text" value="<?php echo $results->e_m; ?>">
                             </div>
 
                             <div class="form-group">
                                 <label for="">Math</label>
-                                <input name="mat" class="form-control" type="text">
-                            </div>
-
-                            <div class="form-group">
-                                
-                                <input name="reg" class="form-control" type="hidden" value="<?php echo $students->reg ?>">
+                                <input name="mat" class="form-control" type="text" value="<?php echo $results->m_m; ?>">
                             </div>
 
                             <div class="form-group">
                                 <label for="">Science</label>
-                                <input name="sci" class="form-control" type="text">
-                            </div>
-
-                            <div class="form-group">
-                                
-                                <input name="board" class="form-control" type="hidden" value="<?php echo $students->board ?>">
+                                <input name="sci" class="form-control" type="text" value="<?php echo $results->s_m; ?>">
                             </div>
 
                             <div class="form-group">
                                 <label for="">Social Science</label>
-                                <input name="ss" class="form-control" type="text">
-                            </div>
-
-                            <div class="form-group">
-                                
-                                <input name="institute" class="form-control" type="hidden" value="<?php echo $students->institute ?>">
+                                <input name="ss" class="form-control" type="text" value="<?php echo $results->ss_m; ?>">
                             </div>
 
                             <div class="form-group">
                                 <label for="">Religion</label>
-                                <input name="religion" class="form-control" type="text">
+                                <input name="religion" class="form-control" type="text" value="<?php echo $results->r_m; ?>">
                             </div>
 
                             <div class="form-group">
