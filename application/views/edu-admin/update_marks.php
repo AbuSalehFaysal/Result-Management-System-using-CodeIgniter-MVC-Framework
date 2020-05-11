@@ -27,7 +27,6 @@
                             </div>
 
                             <div class="form-group">
-                                <label for=""></label>
                                 <input name="result_sl" class="form-control" type="hidden" value="<?php echo $results->result_sl; ?>">
                             </div>
 
