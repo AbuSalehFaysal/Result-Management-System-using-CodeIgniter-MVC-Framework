@@ -1,10 +1,4 @@
-<?php 
 
-    
-    require_once "libs/function.php";
-
-
- ?>
 
 <!DOCTYPE html>
 <html lang="en" class=" ">
@@ -15,7 +9,7 @@
     <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="../assets/css/app.v1.css" type="text/css" />
-    <!--[if lt IE 9]> <script src="js/ie/html5shiv.js"></script> <script src="js/ie/respond.min.js"></script> <script src="js/ie/excanvas.js"></script> <![endif]-->
+    
 </head>
 
 <body class="">
@@ -60,15 +54,13 @@
             </section>
         </div>
     </section>
-    <!-- footer -->
+
     <footer id="footer">
         <div class="text-center padder">
             <p> <small><br></small> </p>
         </div>
     </footer>
-    <!-- / footer -->
-    <!-- Bootstrap -->
-    <!-- App -->
+
     <script src="../assets/js/app.v1.js"></script>
     <script src="../assets/js/app.plugin.js"></script>
 </body>

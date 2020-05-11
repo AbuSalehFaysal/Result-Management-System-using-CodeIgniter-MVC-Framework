@@ -199,12 +199,10 @@
 
 	public function getStudentResult($Board, $roll, $reg)
 	{
-		// var_dump($Board);
-		// var_dump($roll);
-		// var_dump($reg);
+		
 		
 		$query = $this->db->get_where('students_results', array('board' =>$Board, 'roll' =>$roll, 'reg'=>$reg ));
-		// var_dump($query->row());
+	
 
 		if ( $query->num_rows() > 0 ) {
 			# code...

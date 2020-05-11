@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title
+	<title>Document</title>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery.js'); ?>"></script>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.css'); ?>">
@@ -10,7 +10,7 @@
 <body>
 	
 
-	<div class="card">
+	<div class="card container">
 		<div class="card-header">Student Information</div>
 		<div class="card-body">
 			<h1>Name: <?php echo $students->stu_name; ?></h1>
@@ -20,7 +20,7 @@
 			<h3>Institute: <?php echo $students->institute; ?></h3>
 		</div>
 		<div class="card-footer">
-			<a href="<?php echo base_url(); ?>update_result/<?php echo $students->stu_roll; ?>">Edit Student Result</a>
+			<a type="button" class="btn btn-primary btn-lg" href="<?php echo base_url(); ?>update_result/<?php echo $students->stu_roll; ?>">Edit Student Result</a>
 		</div>
 	</div>
 

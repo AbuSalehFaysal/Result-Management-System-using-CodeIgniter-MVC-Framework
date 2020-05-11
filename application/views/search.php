@@ -1,36 +1,3 @@
-<?php // $conn = new mysqli('localhost','root','','edu_board'); ?>
-<?php 
-
-		// require_once "edu-admin/libs/function.php";
-
-
-		// if ( isset($_POST['submit']) ) {
-		// 	# code...
-		// 	$board = $_POST['board'];
-		// 	$roll = $_POST['roll'];
-		// 	$reg = $_POST['reg'];
-
-
-		// 	$sql = "SELECT * FROM students_results WHERE board='$board' AND roll='$roll' AND reg='$reg' " ;
-		// 	$data = $conn -> query($sql);
-
-		// 	$show_result = $data -> fetch_assoc();
-
-			
-
-
-		// }else{
-		// 	header("location:".base_url());
-		// }
-		
-
-
-
-
- ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +5,6 @@
 	<meta charset="UTF-8">
 	<title>Result Management System</title>
 	<link rel="stylesheet" href="assets/ui_assets/css/syle.css">
-
 	<link rel="shortcut icon" type="" href="">
 </head>
 <body>
@@ -168,6 +134,8 @@
 		</div>
 		
 	</div>
+
+	
 	
 
 	
