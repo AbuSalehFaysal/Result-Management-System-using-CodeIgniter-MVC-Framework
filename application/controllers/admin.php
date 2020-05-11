@@ -196,8 +196,12 @@ class Admin extends CI_Controller {
 
 	public function searchstudent()
 	{
+		$Board = $this->input->post('board');
+		$roll = $this->input->post('roll');
+		$reg = $this->input->post('reg');
 		$this->load->model('admin_model');	
-		$results = $this->admin_model->getStudentResult();
+		$results = $this->admin_model->getStudentResult($Board, $roll, $reg);
+		// var_dump($results);
 		$this->load->view('search',['results'=>$results]);
 	}
 }
