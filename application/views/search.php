@@ -1,29 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Result Management System</title>
-	<link rel="stylesheet" href="assets/ui_assets/css/syle.css">
-	<link rel="shortcut icon" type="" href="">
-</head>
-<body>
-	
-
-	<div class="wraper">
-		<div class="w-top">
-			<div class="logo">
-				
+	<head>
+		<meta charset="UTF-8">
+		<title>Result Management System</title>
+		<link rel="stylesheet" href="assets/ui_assets/css/syle.css">
+		<link rel="shortcut icon" type="" href="">
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.css'); ?>">
+	</head>
+	<body>
+		<div class="wraper">
+			<div class="w-top">
+				<div class="logo">
+					
+				</div>
+				<div class="banner">
+					<h3></h3>
+					<hr>
+					<h4></h4>
+				</div>
 			</div>
-			<div class="banner">
-				<h3></h3>
-				<hr>
-				<h4></h4>
-			</div>
-		</div>
-		<div class="w-main">
-
-
+			<div class="w-main">
 				<div class="student-info">
 					<div class="student-photo">
 						<img src="assets/images/p10.jpg" alt="">
@@ -52,31 +48,21 @@
 							</tr>
 							<tr>
 								<td>Result</td>
-
-								<?php 
-
+								<?php
 									if($results->result == 'Passed') :
-
-								 ?>
+								?>
 								<td><span style="color:green;font-weight:bold;">Passed<span></td>
-
-									<?php 
-
-								else :  
-									?>
-
-								<td><span style="color:red;font-weight:bold;">Failed<span></td>	
-
+								<?php
+								else :
+								?>
+								<td><span style="color:red;font-weight:bold;">Failed<span></td>
 								
-								<?php endif ; ?>	 
-
-									 
+								<?php endif ; ?>
+								
 							</tr>
 						</table>
 					</div>
-
 				</div>
-
 				<div class="student-result">
 					<table>
 						<tr>
@@ -86,8 +72,6 @@
 							<td>GPA</td>
 							<td>CGPA</td>
 						</tr>
-
-
 						<tr>
 							<td>Bangla</td>
 							<td><?php echo $results->b_m; ?></td>
@@ -127,19 +111,8 @@
 						</tr>
 					</table>
 				</div>
-
-
-
-
-		</div>
-		
-	</div>
-
-	
-	
-
-	
-
-	
-</body>
+				<a type="button" class="btn btn-info btn-lg" href="<?php echo base_url(); ?>">Back</a>
+			</div>
+		</div>	
+	</body>
 </html>
