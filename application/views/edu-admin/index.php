@@ -37,7 +37,7 @@
                         <br>
                         <br>
                         <p class="text-muted text-center"><small>Are you a student?</small></p>
-                        <a href="<?php echo base_url(); ?>" class="btn btn-lg btn-default btn-block">Click Here to Check Your Result</a>
+                        <a href="<?php echo base_url();?>" class="btn btn-lg btn-default btn-block">Click Here to Check Your Result</a>
                     </form>
                 </section>
             </div>
@@ -47,8 +47,5 @@
                 <p> <small><br></small> </p>
             </div>
         </footer>
-        <script src="../assets/js/app.v1.js"></script>
-        <script src="../assets/js/app.plugin.js"></script>
-        
     </body>
 </html>

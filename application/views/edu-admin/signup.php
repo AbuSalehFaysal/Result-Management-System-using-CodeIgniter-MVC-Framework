@@ -41,7 +41,5 @@
                 <p class="text-muted text-center"><small>Already have an account?</small></p> <a href="<?php echo base_url(); ?>edu-admin/signin" class="btn btn-lg btn-default btn-block">Sign in</a>
             </form>
         </section>
-        <script src="../assets/js/app.v1.js"></script>
-        <script src="../assets/js/app.plugin.js"></script>
     </body>
 </html>

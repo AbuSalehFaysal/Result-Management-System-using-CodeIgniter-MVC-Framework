@@ -92,8 +92,8 @@ class Admin extends CI_Controller {
 		$this->form_validation->set_rules('board','Board','required');
 		$this->form_validation->set_rules('institute','Institute','required');
 		if ($this->form_validation->run()==false) {
-			$this->load->view('edu-admin/add_new_student');
 			$this->session->set_flashdata('error', 'Please, fill the form properly!');
+			$this->load->view('edu-admin/add_new_student');
 		} else {
 			$stu_name = $this->input->post('stu_name');
 			$stu_roll = $this->input->post('stu_roll');

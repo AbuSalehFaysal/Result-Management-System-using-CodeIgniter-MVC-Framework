@@ -56,9 +56,7 @@
 								else :
 								?>
 								<td><span style="color:red;font-weight:bold;">Failed<span></td>
-								
 								<?php endif ; ?>
-								
 							</tr>
 						</table>
 					</div>
