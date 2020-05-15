@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2020 at 11:39 PM
+-- Generation Time: May 15, 2020 at 02:25 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -42,9 +42,10 @@ CREATE TABLE `students_info` (
 --
 
 INSERT INTO `students_info` (`stu_sl`, `stu_name`, `stu_roll`, `reg`, `board`, `institute`) VALUES
-(73, 'Abu Saleh Faysal', '01', '101010', 'Dhaka', 'BAF Shaheen College Dhaka'),
-(74, 'Shahriar Kabir', '02', '202020', 'Dhaka', 'BAF Shaheen College Dhaka'),
-(75, 'Zannatun Nayeem', '03', '303030', 'Dhaka', 'Dhaka Residential Model College');
+(76, 'Abu Saleh Faysal', '01', '101010', 'Dhaka', 'BAF Shaheen College Dhaka'),
+(77, 'Shahriar Kabir', '02', '202020', 'Dhaka', 'BAF Shaheen College Dhaka'),
+(78, 'Zannatun Nayeem', '03', '303030', 'Dhaka', 'Dhaka Residential Model College'),
+(79, 'Ferdous Hasan Himu', '04', '404040', 'Comilla', 'Comilla Victoria College');
 
 -- --------------------------------------------------------
 
@@ -87,8 +88,8 @@ CREATE TABLE `students_results` (
 --
 
 INSERT INTO `students_results` (`result_sl`, `name`, `roll`, `reg`, `board`, `institute`, `b_m`, `b_g`, `b_c`, `e_m`, `e_g`, `e_c`, `m_m`, `m_g`, `m_c`, `s_m`, `s_g`, `s_c`, `ss_m`, `ss_g`, `ss_c`, `r_m`, `r_g`, `r_c`, `grade_alpha`, `cgpa`, `result`) VALUES
-(66, 'Abu Saleh Faysal', '01', '101010', 'Dhaka', 'BAF Shaheen College Dhaka', 90, 'A+', 5, 90, 'A+', 5, 90, 'A+', 5, 90, 'A+', 5, 90, 'A+', 5, 90, 'A+', 5, 'A+', 5, 'Passed'),
-(67, 'Zannatun Nayeem', '03', '303030', 'Dhaka', 'Dhaka Residential Model College', 50, 'B', 3, 60, 'A-', 3.5, 70, 'A', 4, 90, 'A+', 5, 65, 'A-', 3.5, 45, 'C', 2, 'A-', 3.5, 'Passed');
+(68, 'Abu Saleh Faysal', '01', '101010', 'Dhaka', 'BAF Shaheen College Dhaka', 90, 'A+', 5, 60, 'A-', 3.5, 90, 'A+', 5, 90, 'A+', 5, 65, 'A-', 3.5, 100, 'A+', 5, 'A', 4.5, 'Passed'),
+(70, 'Zannatun Nayeem', '03', '303030', 'Dhaka', 'Dhaka Residential Model College', 90, 'A+', 5, 60, 'A-', 3.5, 90, 'A+', 5, 0, 'D', 0, 100, 'A+', 5, 89, 'A+', 5, 'A-', 3.92, 'Failed');
 
 -- --------------------------------------------------------
 
@@ -141,13 +142,13 @@ ALTER TABLE `user_admin`
 -- AUTO_INCREMENT for table `students_info`
 --
 ALTER TABLE `students_info`
-  MODIFY `stu_sl` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `stu_sl` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `students_results`
 --
 ALTER TABLE `students_results`
-  MODIFY `result_sl` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `result_sl` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT for table `user_admin`

@@ -1,13 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Document</title>
-		<script type="text/javascript" src="<?php // echo base_url('assets/js/bootstrap.js'); ?>"></script>
-		<script type="text/javascript" src="<?php // echo base_url('assets/js/jquery.js'); ?>"></script>
-		<link rel="stylesheet" type="text/css" href="<?php // echo base_url('assets/css/bootstrap.css'); ?>">
-	</head> -->
-	<?php $this->load->view('edu-admin/template/header'); ?>
+<?php $this->load->view('edu-admin/template/header'); ?>
 
 	<body>
 		<div class="card container">
@@ -24,5 +15,5 @@
 			</div>
 		</div>
 	</body>
-	<?php $this->load->view('edu-admin/template/footer'); ?>
-<!-- </html> -->
+
+<?php $this->load->view('edu-admin/template/footer'); ?>

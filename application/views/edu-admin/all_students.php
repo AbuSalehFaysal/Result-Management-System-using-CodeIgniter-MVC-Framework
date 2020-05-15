@@ -33,7 +33,7 @@
                         
                         <tbody>
                             <?php $i=01; ?>
-                            <?php if( count($students) ): ?>
+                            <?php if( !empty($students) ): ?>
                             <?php foreach( $students as $students ): ?>
                             <tr>
                                 <td><?php echo $i; $i++; ?></td>

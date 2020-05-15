@@ -209,7 +209,8 @@ class Admin extends CI_Controller {
 		}
 	}
 
-	public function edit_marks(){
+	public function edit_marks()
+	{
 		$this->load->model('Admin_model');
 		$result_sl = $this->input->post('result_sl');
 		$b_m = $this->input->post('ban');
@@ -272,17 +273,6 @@ class Admin extends CI_Controller {
 	}
 		
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
